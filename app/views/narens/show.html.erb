@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @naren.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @naren.email %>
+</p>
+
+<p>
+  <strong>Email confirmation:</strong>
+  <%= @naren.email_confirmation %>
+</p>
+
+<%= link_to 'Edit', edit_naren_path(@naren) %> |
+<%= link_to 'Back', narens_path %>

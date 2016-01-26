@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @siri.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @siri.email %>
+</p>
+
+<p>
+  <strong>Email confirmation:</strong>
+  <%= @siri.email_confirmation %>
+</p>
+
+<%= link_to 'Edit', edit_siri_path(@siri) %> |
+<%= link_to 'Back', siris_path %>

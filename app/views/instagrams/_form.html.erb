@@ -1,0 +1,57 @@
+<%= form_for(@instagram) do |f| %>
+  <% if @instagram.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@instagram.errors.count, "error") %> prohibited this instagram from being saved:</h2>
+
+      <ul>
+      <% @instagram.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :post_id %><br>
+    <%= f.number_field :post_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :textbox %><br>
+    <%= f.text_area :textbox %>
+  </div>
+  <div class="field">
+    <%= f.label :hashtags %><br>
+    <%= f.text_field :hashtags %>
+  </div>
+  <div class="field">
+    <%= f.label :followers_count %><br>
+    <%= f.number_field :followers_count %>
+  </div>
+  <div class="field">
+    <%= f.label :followed_by %><br>
+    <%= f.number_field :followed_by %>
+  </div>
+  <div class="field">
+    <%= f.label :posted_from_city %><br>
+    <%= f.text_field :posted_from_city %>
+  </div>
+  <div class="field">
+    <%= f.label :posted_at %><br>
+    <%= f.datetime_select :posted_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

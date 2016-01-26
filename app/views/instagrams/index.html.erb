@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Instagrams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Post</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Textbox</th>
+      <th>Hashtags</th>
+      <th>Followers count</th>
+      <th>Followed by</th>
+      <th>Posted from city</th>
+      <th>Posted at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @instagrams.each do |instagram| %>
+      <tr>
+        <td><%= instagram.post_id %></td>
+        <td><%= instagram.name %></td>
+        <td><%= instagram.phone %></td>
+        <td><%= instagram.email %></td>
+        <td><%= instagram.textbox %></td>
+        <td><%= instagram.hashtags %></td>
+        <td><%= instagram.followers_count %></td>
+        <td><%= instagram.followed_by %></td>
+        <td><%= instagram.posted_from_city %></td>
+        <td><%= instagram.posted_at %></td>
+        <td><%= link_to 'Show', instagram %></td>
+        <td><%= link_to 'Edit', edit_instagram_path(instagram) %></td>
+        <td><%= link_to 'Destroy', instagram, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Instagram', new_instagram_path %>

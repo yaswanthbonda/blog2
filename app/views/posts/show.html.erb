@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @post.post_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @post.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @post.email %>
+</p>
+
+<p>
+  <strong>Posttext:</strong>
+  <%= @post.posttext %>
+</p>
+
+<p>
+  <strong>Posted loc:</strong>
+  <%= @post.posted_loc %>
+</p>
+
+<p>
+  <strong>Posted at:</strong>
+  <%= @post.posted_at %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

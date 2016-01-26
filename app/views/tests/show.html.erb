@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tweet:</strong>
+  <%= @test.tweet_id %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @test.username %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @test.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @test.email %>
+</p>
+
+<p>
+  <strong>Tweettext:</strong>
+  <%= @test.tweettext %>
+</p>
+
+<p>
+  <strong>Hashtags:</strong>
+  <%= @test.hashtags %>
+</p>
+
+<p>
+  <strong>Followers count:</strong>
+  <%= @test.followers_count %>
+</p>
+
+<p>
+  <strong>Retweet count:</strong>
+  <%= @test.retweet_count %>
+</p>
+
+<p>
+  <strong>Geo location:</strong>
+  <%= @test.geo_location %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @test.created_at %>
+</p>
+
+<%= link_to 'Edit', edit_test_path(@test) %> |
+<%= link_to 'Back', tests_path %>

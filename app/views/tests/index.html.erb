@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tweet</th>
+      <th>Username</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Tweettext</th>
+      <th>Hashtags</th>
+      <th>Followers count</th>
+      <th>Retweet count</th>
+      <th>Geo location</th>
+      <th>Created at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tests.each do |test| %>
+      <tr>
+        <td><%= test.tweet_id %></td>
+        <td><%= test.username %></td>
+        <td><%= test.name %></td>
+        <td><%= test.email %></td>
+        <td><%= test.tweettext %></td>
+        <td><%= test.hashtags %></td>
+        <td><%= test.followers_count %></td>
+        <td><%= test.retweet_count %></td>
+        <td><%= test.geo_location %></td>
+        <td><%= test.created_at %></td>
+        <td><%= link_to 'Show', test %></td>
+        <td><%= link_to 'Edit', edit_test_path(test) %></td>
+        <td><%= link_to 'Destroy', test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test', new_test_path %>

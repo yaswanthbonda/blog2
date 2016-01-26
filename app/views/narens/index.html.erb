@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Narens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Email confirmation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @narens.each do |naren| %>
+      <tr>
+        <td><%= naren.name %></td>
+        <td><%= naren.email %></td>
+        <td><%= naren.email_confirmation %></td>
+        <td><%= link_to 'Show', naren %></td>
+        <td><%= link_to 'Edit', edit_naren_path(naren) %></td>
+        <td><%= link_to 'Destroy', naren, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Naren', new_naren_path %>

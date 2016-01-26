@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Unique:</strong>
+  <%= @email.unique_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @email.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @email.email %>
+</p>
+
+<p>
+  <strong>Email confirmation:</strong>
+  <%= @email.email_confirmation %>
+</p>
+
+<%= link_to 'Edit', edit_email_path(@email) %> |
+<%= link_to 'Back', emails_path %>

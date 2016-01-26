@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @instagram.post_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @instagram.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @instagram.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @instagram.email %>
+</p>
+
+<p>
+  <strong>Textbox:</strong>
+  <%= @instagram.textbox %>
+</p>
+
+<p>
+  <strong>Hashtags:</strong>
+  <%= @instagram.hashtags %>
+</p>
+
+<p>
+  <strong>Followers count:</strong>
+  <%= @instagram.followers_count %>
+</p>
+
+<p>
+  <strong>Followed by:</strong>
+  <%= @instagram.followed_by %>
+</p>
+
+<p>
+  <strong>Posted from city:</strong>
+  <%= @instagram.posted_from_city %>
+</p>
+
+<p>
+  <strong>Posted at:</strong>
+  <%= @instagram.posted_at %>
+</p>
+
+<%= link_to 'Edit', edit_instagram_path(@instagram) %> |
+<%= link_to 'Back', instagrams_path %>
